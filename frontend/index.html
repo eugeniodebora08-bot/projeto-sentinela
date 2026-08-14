@@ -94,9 +94,17 @@
     </div>
 
     <script>
-        function login() {
-            alert("Login realizado.");
-        }
+      fetch("/login, {
+ method: "POST",
+headers: {"Content-type": "application/json"},
+        body JSON.stringify({
+        usuario: usuario.value,
+            senha: senha.value
+       )}
+        })
+.then( r => r.json())
+.then( data => {
+    if( data.tipo "triagem") location.h
     </script>
 </body>
 </html>
