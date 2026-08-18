@@ -94,17 +94,23 @@
     </div>
 
     <script>
+        function login() {
       fetch("/login, {
  method: "POST",
 headers: {"Content-type": "application/json"},
         body JSON.stringify({
         usuario: usuario.value,
             senha: senha.value
-       )}
+        })
         })
 .then( r => r.json())
 .then( data => {
-    if( data.tipo "triagem") location.h
+    if( data.tipo "triagem") location.href = "triagem.html";
+    if (data.tipo "medico" ) location.href = "medico.html";
+    if( data.tipo "atendimento") location.href =
+        "atendimento.html";
+});
+        }
     </script>
 </body>
 </html>
