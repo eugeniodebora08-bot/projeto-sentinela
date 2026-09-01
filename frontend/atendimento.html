@@ -15,8 +15,7 @@
 <input id="telefone" placeholder="telefone">
 <input id="e-mail" placeholder="e-mail">
  <input id="contato de emergencia" placeholder="contato de emergencia">
-  
-
+ 
 <select id="tipo">
   <option>Convenio</option>
   <option>Particular</option>
@@ -33,16 +32,9 @@ function cadastrar(){
   method:"POST",
   headers:{"Content-Type":"application/json"},
   body: JSON.stringify({
-    nome: document.getElementById('nome').value,
-    cpf: document.getElementById('cpf').value,
-    datadenascimento: document.getElementById('datadenascimento').value,
-    sexo: document.getElementById('sexo').value,
-    nomedamae: document.getElementById('nomedamae').value,
-    estadocivil: document.getElementById('estado civil').value,
-    endereço: document.getElementById('endereço').value,
-    telefone: document.getElementById('telefone').value,
-    email: document.getElementById('email').value,
-     contatodeemergencia: document.getElementById('contatodeemergencia').value,
+    nome: nome.value,
+    cpf: cpf.value,
+    tipo: tipo.value
   })
  });
  alert("Paciente enviado para triagem");
