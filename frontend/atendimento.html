@@ -33,9 +33,16 @@ function cadastrar(){
   method:"POST",
   headers:{"Content-Type":"application/json"},
   body: JSON.stringify({
-    nome: nome.value,
-    cpf: cpf.value,
-    tipo: tipo.value
+    nome: document.getElementById('nome').value,
+    cpf: document.getElementById('cpf').value,
+    datadenascimento: document.getElementById('datadenascimento').value,
+    sexo: document.getElementById('sexo').value,
+    nomedamae: document.getElementById('nomedamae').value,
+    estadocivil: document.getElementById('estado civil').value,
+    endereço: document.getElementById('endereço').value,
+    telefone: document.getElementById('telefone').value,
+    email: document.getElementById('email').value,
+     contatodeemergencia: document.getElementById('contatodeemergencia').value,
   })
  });
  alert("Paciente enviado para triagem");
